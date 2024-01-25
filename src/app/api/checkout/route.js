@@ -7,6 +7,7 @@ const stripe = require('stripe')(process.env.STRIPE_SK);
 
 export async function POST(req) {
   mongoose.connect(process.env.MONGO_URL);
+  
 
   const {cartProducts, address} = await req.json();
   const session = await getServerSession(authOptions);
@@ -71,7 +72,7 @@ export async function POST(req) {
         shipping_rate_data: {
           display_name: 'Delivery fee',
           type: 'fixed_amount',
-          fixed_amount: {amount: 500, currency: 'INR'},
+          fixed_amount: {amount: 5000, currency: 'INR'},
         },
         
       }
