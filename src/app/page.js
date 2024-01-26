@@ -29,8 +29,9 @@ export default function Home() {
         <div className="mt-8">
           <a className="text-4xl underline text-gray-500" href="tel:+46738123123">
             +99 84 179 359<br/>
-            priyanshu.vermaa0@gmail.com
+            priyanshu. vermaa0 @gmail.com
           </a>
+          
         </div>
       </section>
     </>
