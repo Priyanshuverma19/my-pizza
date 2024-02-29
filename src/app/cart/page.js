@@ -6,6 +6,7 @@ import SectionHeaders from "@/components/layout/SectionHeaders";
 import CartProduct from "@/components/menu/CartProduct";
 import {useProfile} from "@/components/UseProfile";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import {useContext, useEffect, useState} from "react";
 import toast from "react-hot-toast";
 
@@ -48,6 +49,7 @@ export default function CartPage() {
     // address and shopping cart products
 
     const promise = new Promise((resolve, reject) => {
+    
       fetch('/api/checkout', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
